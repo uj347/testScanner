@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="primary_accented_color_start">#2F3338</color>
+    <color name="primary_accented_color_end">#1D2024</color>
+    <color name="primary_color_start">#34393F</color>
+    <color name="primary_color_end">#1B1D21</color>
+    <color name="primary_text_color">#FFFFFF</color>
+</resources>

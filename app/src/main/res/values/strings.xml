@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">testScanner</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="label_targetSdkVersion">TargetSdkVersion:</string>
+    <string name="label_size">Size:</string>
+    <string name="label_instal_date">Installation date:</string>
+    <string name="back_button_text">Back</string>
+    <string name="scan_result">Scan result:</string>
+
+
+</resources>

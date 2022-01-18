@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.TestScanner"
+    android:background="@drawable/mainscreen_background"
+    tools:context="testscanner.mainactivity.MainActivity">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        style="@style/fragment_container_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+
+        android:layout_marginBottom="45dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidline"
+        app:navGraph="@navigation/nav_graph" />
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/customSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/small_element_height_bigradius"
+        android:thumb="@drawable/switch_thumb"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guidline"
+        app:layout_constraintEnd_toStartOf="@id/center_guideline"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:switchMinWidth="@dimen/switch_width"
+        app:track="@drawable/switch_track" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menu_button"
+        android:layout_width="@dimen/small_element_height_bigradius"
+        android:layout_height="@dimen/small_element_height_bigradius"
+        android:background="@drawable/menu_button"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guidline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@id/center_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

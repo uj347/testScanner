@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="@color/primary_accented_color_start"
+                android:endColor="@color/primary_accented_color_end"
+                android:angle="45"/>
+
+            <size android:height="@dimen/small_element_height_bigradius"
+                android:width="@dimen/small_element_height_bigradius"/>
+        </shape>
+    </item>
+
+
+    <item android:drawable="@drawable/menu_vector"
+        android:bottom="24dp"
+        android:top="24dp"
+        android:left="17dp"
+        android:right="17dp"
+        />
+</layer-list>

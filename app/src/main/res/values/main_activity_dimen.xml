@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_element_height_bigradius">55dp</dimen>
+    <dimen name="small_element_height_smallradius">50dp</dimen>
+    <dimen name="switch_thumb_side_padding">63dp</dimen>
+    <dimen name="switch_top_bottom_padding">19dp</dimen>
+    <dimen name="switch_empty_side_padding">12dp</dimen>
+    <dimen name="thumb_picture_padding">16dp</dimen>>
+    <dimen name="switch_width">145dp</dimen>>
+    <dimen name="large_text_size">32sp</dimen>
+    <dimen name="midle_text_size">17sp</dimen>
+    <dimen name="usual_text_size">12sp</dimen>
+</resources>

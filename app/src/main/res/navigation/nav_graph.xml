@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreenFragment2">
+    <fragment
+        android:id="@+id/mainScreenFragment2"
+        android:name="com.uj.mainactivity.fragments.mainscreen.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreenFragment2_to_recyclerGridFragment"
+            app:destination="@id/recyclerGridFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerGridFragment"
+        android:name="com.uj.mainactivity.fragments.recyclergrid.RecyclerGridFragment"
+        android:label="fragment_recycler_grid"
+        tools:layout="@layout/fragment_recycler_grid" >
+        <action
+            android:id="@+id/action_recyclerGridFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_recyclerGridFragment_to_mainScreenFragment2"
+            app:destination="@id/mainScreenFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.uj.mainactivity.fragments.mainscreen.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_recyclerGridFragment"
+            app:destination="@id/recyclerGridFragment"
+            app:popUpTo="@id/recyclerGridFragment" />
+        <argument
+            android:name="app_info_index"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/primary_accented_color_start"
+                android:endColor="@color/primary_accented_color_end"
+                android:angle="45"/>
+
+            <corners android:radius="360sp"/>
+            <size android:height="@dimen/small_element_height_bigradius"/>
+
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/daymode"
+        android:bottom="@dimen/switch_top_bottom_padding"
+        android:top="@dimen/switch_top_bottom_padding"
+        android:left="@dimen/switch_thumb_side_padding"
+        android:right="@dimen/switch_empty_side_padding"
+        />
+
+</layer-list>
