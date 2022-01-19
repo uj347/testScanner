@@ -21,11 +21,12 @@
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/track_daymode.xml" value="0.32083333333333336" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/track_nightmode.xml" value="0.32083333333333336" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/zhushu.xml" value="0.340625" />
-        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_details.xml" value="0.33" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_main_screen.xml" value="0.33" />
-        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_recycler_grid.xml" value="0.22" />
-        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/recycler_holder.xml" value="0.2" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_recycler_grid.xml" value="0.37986411365040146" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/recycler_holder.xml" value="0.4073226544622426" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/menu/menu_main_activity.xml" value="0.1" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.340625" />
       </map>
     </option>

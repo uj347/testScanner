@@ -3,6 +3,7 @@ package com.uj.mainactivity.model
 import android.content.pm.ApplicationInfo
 import android.graphics.drawable.Drawable
 import java.io.File
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,8 +35,9 @@ private val installMillisDate:Long
         return File(publicSourceDir).length()
     }
 
-    private fun Long.bytesToMbytes():Float{
-        return this.toFloat()/1_048_576
+    private fun Long.bytesToMbytes():String{
+       val df=DecimalFormat("#.###")
+        return df.format (this.toFloat()/1_048_576)+" MB"
     }
 
     private fun Long.millisToDate():String{

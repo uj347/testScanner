@@ -6,6 +6,6 @@
     <string name="label_instal_date">Installation date:</string>
     <string name="back_button_text">Back</string>
     <string name="scan_result">Scan result:</string>
-
+    <string name="menu_exit">Exit</string>
 
 </resources>
