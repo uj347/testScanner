@@ -56,7 +56,7 @@ class DetailsFragment : Fragment() {
                         appNameText.setText(appInfo.name)
                         targetSdkTextField.setText(appInfo.targetSdk.toString())
                         sizeTextField.setText(appInfo.appSizeMbytes.toString())
-                        intallDateTextField.setText(appInfo.installDate)
+                        installDateTextField.setText(appInfo.installDate)
                     }
                 }
             }

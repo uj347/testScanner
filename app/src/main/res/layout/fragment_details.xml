@@ -1,149 +1,203 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
+    android:id="@+id/details_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uj.mainactivity.fragments.mainscreen.DetailsFragment" >
+    android:theme="@style/Theme.TestScanner"
+    tools:context="com.uj.mainactivity.fragments.mainscreen.DetailsFragment">
 
-    <Button
-        style="@style/wide_back_button_style"
-        android:id="@+id/back_button"
-        android:text="@string/back_button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/full_info_card" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/standard_button_background"
+        android:elevation="4dp"
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/full_info_card"
-        style="@style/detailed_info_card_style"
         app:layout_constraintBottom_toTopOf="@+id/back_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_block_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42" />
 
-            <ImageView
-                android:id="@+id/app_icon_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:scaleType="fitCenter"
-                app:layout_constraintBottom_toTopOf="@id/app_name_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+        <LinearLayout
+            android:id="@+id/size_box"
+            style="@style/text_outputs_style"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/top_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_block_guideline"
+            app:layout_constraintVertical_chainStyle="packed">
 
             <TextView
-                android:id="@+id/app_name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textSize="@dimen/large_text_size"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/info_block"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/app_icon_view" />
+                android:gravity="start"
+                android:inputType="none"
+                android:labelFor="@id/size_text_field"
+                android:text="@string/label_size"
+                android:textSize="@dimen/usual_text_size" />
 
-            <LinearLayout
-                android:id="@+id/info_block"
+            <TextView
+                android:id="@+id/size_text_field"
+                style="@style/details_text_container_style"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/app_icon_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="25dp"
+            android:scaleType="center"
+            app:chainUseRtl="false"
+            app:layout_constraintBottom_toTopOf="@+id/app_name_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.16000003"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/target_sdk_box"
+            style="@style/text_outputs_style"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/app_name_text">
+                android:gravity="start"
+                android:inputType="none"
+                android:labelFor="@id/target_sdk_text_field"
+                android:text="@string/label_targetSdkVersion"
+                android:textSize="@dimen/usual_text_size" />
 
-                <LinearLayout
-                    android:id="@+id/size_box"
-                    style="@style/text_outputs_style">
+            <TextView
+                android:id="@+id/target_sdk_text_field"
+                style="@style/details_text_container_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:inputType="none"
-                        android:labelFor="@id/size_text_field"
-                        android:text="@string/label_size"
-                        android:textSize="@dimen/usual_text_size" />
+        </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/size_text_field"
-                        style="@style/details_text_container_style"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/instal_date_box"
+            style="@style/text_outputs_style"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_divider">
 
-                </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:inputType="none"
+                android:labelFor="@id/install_date_text_field"
+                android:text="@string/label_instal_date"
+                android:textSize="@dimen/usual_text_size" />
+            <TextView
+                android:id="@+id/install_date_text_field"
+                style="@style/details_text_container_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-                <com.google.android.material.divider.MaterialDivider
-                    android:id="@+id/top_divider"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginStart="45dp"
-                    android:layout_marginEnd="45dp" />
+        </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/target_sdk_box"
-                    style="@style/text_outputs_style">
+        <TextView
+            android:id="@+id/app_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-30dp"
+            android:layout_marginEnd="-30dp"
+            android:elegantTextHeight="true"
+            android:textAlignment="center"
+            android:textSize="@dimen/midle_text_size"
+            android:textStyle="bold"
+            app:autoSizeTextType="none"
+            app:layout_constraintBottom_toTopOf="@+id/top_block_guideline"
+            app:layout_constraintEnd_toEndOf="@+id/app_icon_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/app_icon_view"
+            app:layout_constraintTop_toBottomOf="@+id/app_icon_view"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:inputType="none"
-                        android:labelFor="@id/target_sdk_text_field"
-                        android:text="@string/label_targetSdkVersion"
-                        android:textSize="@dimen/usual_text_size" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/top_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/target_sdk_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/size_box" />
 
-                    <TextView
-                        android:id="@+id/target_sdk_text_field"
-                        style="@style/details_text_container_style"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-                <com.google.android.material.divider.MaterialDivider
-                    android:id="@+id/bottom_divider"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginStart="45dp"
-                    android:layout_marginEnd="45dp" />
-
-
-                <LinearLayout
-                    android:id="@+id/instal_date_box"
-                    style="@style/text_outputs_style">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:inputType="none"
-                        android:labelFor="@id/intall_date_text_field"
-                        android:text="@string/label_instal_date"
-                        android:textSize="@dimen/usual_text_size" />
-
-                    <TextView
-                        android:id="@+id/intall_date_text_field"
-                        style="@style/details_text_container_style"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintBottom_toTopOf="@+id/instal_date_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/target_sdk_box" />
 
 
-            </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_button"
+        style="@style/wide_back_button_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/back_button_text"
+        app:layout_constraintBottom_toTopOf="@+id/button_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottom_block_guideline" />
 
-    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_block_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9694657" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

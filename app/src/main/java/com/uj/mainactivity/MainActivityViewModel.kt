@@ -1,5 +1,6 @@
 package com.uj.mainactivity
 
+import android.animation.ObjectAnimator
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -16,7 +17,11 @@ import kotlinx.coroutines.launch
 
 
 class MainActivityViewModel():ViewModel() {
-     private val appInfoScanner:AppInfoScanner=AppInfoScanner()
+
+
+
+
+    private val appInfoScanner:AppInfoScanner=AppInfoScanner()
      private  val _appScanResult: MutableStateFlow<ScanResult> = MutableStateFlow(ScanResult.NotCompletedScan())
 
 
@@ -34,6 +39,9 @@ class MainActivityViewModel():ViewModel() {
          _appScanResult.value=appInfoScanner.performScan(androidContext)}
 
     }
+
+
+
 
 
 

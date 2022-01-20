@@ -35,8 +35,12 @@ class MainActivity : AppCompatActivity() {
             this.setOnCheckedChangeListener {switch,chkd->
 
             when(chkd){
-                true->{AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)}
-                false->{AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)}
+                true->{AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+                }
+                false->{AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+                }
                 }
             }
         }

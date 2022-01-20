@@ -5,58 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="20dp"
+    android:layout_marginTop="7dp"
     android:layout_marginEnd="20dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
-    android:background="@color/transparent">
+    android:layout_marginBottom="7dp"
+    android:background="@drawable/recycler_element_background"
+    android:elevation="4dp"
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/mainscreen_background"
-        android:elevation="4dp"
-        app:cardCornerRadius="15dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recycler_app_name_field"
+        style="@style/recycler_view_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:elegantTextHeight="false"
+        android:maxLines="3"
+        android:minLines="3"
+        app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_app_icon_view" />
+
+    <ImageView
+        android:id="@+id/recycler_app_icon_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_app_name_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        tools:srcCompat="@tools:sample/avatars" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/recycler_app_icon_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:scaleType="fitCenter"
-                app:layout_constraintBottom_toTopOf="@+id/recycler_app_name_field"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.74"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/recycler_app_name_field"
-                style="@style/recycler_view_text_style"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="4dp"
-                android:elegantTextHeight="false"
-                android:maxLines="3"
-                android:minLines="3"
-                app:autoSizeTextType="none"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recycler_app_icon_view" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

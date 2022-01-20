@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_main_screen" >
         <action
             android:id="@+id/action_mainScreenFragment2_to_recyclerGridFragment"
-            app:destination="@id/recyclerGridFragment" />
+            app:destination="@id/recyclerGridFragment"
+            app:enterAnim="@anim/emerge"
+            app:exitAnim="@anim/collapse"
+            app:popEnterAnim="@anim/appear_from_back"
+            app:popExitAnim="@anim/collapse" />
     </fragment>
     <fragment
         android:id="@+id/recyclerGridFragment"
@@ -20,10 +24,18 @@
         tools:layout="@layout/fragment_recycler_grid" >
         <action
             android:id="@+id/action_recyclerGridFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/emerge"
+            app:exitAnim="@anim/collapse"
+            app:popEnterAnim="@anim/appear_from_back"
+            app:popExitAnim="@anim/collapse" />
         <action
             android:id="@+id/action_recyclerGridFragment_to_mainScreenFragment2"
-            app:destination="@id/mainScreenFragment2" />
+            app:destination="@id/mainScreenFragment2"
+            app:enterAnim="@anim/emerge"
+            app:exitAnim="@anim/collapse"
+            app:popEnterAnim="@anim/appear_from_back"
+            app:popExitAnim="@anim/collapse" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -33,7 +45,12 @@
         <action
             android:id="@+id/action_detailsFragment_to_recyclerGridFragment"
             app:destination="@id/recyclerGridFragment"
-            app:popUpTo="@id/recyclerGridFragment" />
+            app:enterAnim="@anim/emerge"
+            app:exitAnim="@anim/collapse"
+            app:popEnterAnim="@anim/appear_from_back"
+            app:popExitAnim="@anim/collapse"
+            app:popUpTo="@id/recyclerGridFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="app_info_index"
             app:argType="integer"

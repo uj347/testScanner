@@ -36,7 +36,7 @@ private val installMillisDate:Long
     }
 
     private fun Long.bytesToMbytes():String{
-       val df=DecimalFormat("#.###")
+       val df=DecimalFormat("#.##")
         return df.format (this.toFloat()/1_048_576)+" MB"
     }
 

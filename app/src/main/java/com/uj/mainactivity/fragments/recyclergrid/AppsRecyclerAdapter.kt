@@ -15,8 +15,7 @@ import com.uj.testscanner.databinding.RecyclerHolderBinding
 class AppsRecyclerAdapter(
 
     var dataSet:List<AppInfo> = listOf(),
-    val onclickItemCallback:(index:Int,
-                             iconView:ImageView?)->Unit
+    val onclickItemCallback:(index:Int)->Unit
 ):RecyclerView.Adapter<AppsRecyclerAdapter.AppInfoViewHolder>() {
 
 companion object{
@@ -47,8 +46,7 @@ companion object{
     }
 
     class AppInfoViewHolder(itemView:View,
-                            private val dataSetCallBack:(index:Int,
-                                                           iconView:ImageView?)->Unit):
+                            private val dataSetCallBack:(index:Int)->Unit):
         RecyclerView.ViewHolder(itemView),View.OnClickListener{
         var appInfo:AppInfo?=null
         val icon:ImageView
@@ -59,7 +57,7 @@ companion object{
             itemView.setOnClickListener(this)
         }
 
-        override fun onClick(view: View?) =dataSetCallBack(adapterPosition,icon)
+        override fun onClick(view: View?) =dataSetCallBack(adapterPosition)
 
         fun applyAppinfo(newAppInfo: AppInfo){
             appInfo=newAppInfo

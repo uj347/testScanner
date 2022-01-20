@@ -5,13 +5,20 @@
       <map>
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable-night/mainscreen_background.xml" value="0.3146067415730337" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.340625" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/big_button_background.xml" value="0.30277777777777776" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/daymode.xml" value="0.1" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/gradient_button_circle.xml" value="0.29754322111010006" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/ic_findmyapps.xml" value="0.30277777777777776" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/ic_launcher_background.xml" value="0.340625" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/ic_scanloopesvg.xml" value="0.30277777777777776" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/mainscreen_background.xml" value="0.2851851851851852" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/menu.xml" value="0.1" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/menu_button.xml" value="0.1" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/menu_vector.xml" value="0.1" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/moon.xml" value="0.340625" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/nightmode.xml" value="0.13148148148148148" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/recycler_element_background.xml" value="0.2802547770700637" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/standard_button_background.xml" value="0.13657407407407407" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/sun.xml" value="0.340625" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/switch_thumb.xml" value="0.32083333333333336" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/switch_thumb_day.xml" value="0.32083333333333336" />
@@ -23,9 +30,9 @@
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/drawable/zhushu.xml" value="0.340625" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_details.xml" value="0.33" />
-        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_main_screen.xml" value="0.33" />
-        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_recycler_grid.xml" value="0.37986411365040146" />
-        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/recycler_holder.xml" value="0.4073226544622426" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_main_screen.xml" value="0.2332155477031802" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/fragment_recycler_grid.xml" value="0.3333333333333333" />
+        <entry key="..\:/JavaProjects/testScanner/app/src/main/res/layout/recycler_holder.xml" value="0.5" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/menu/menu_main_activity.xml" value="0.1" />
         <entry key="..\:/JavaProjects/testScanner/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.340625" />
       </map>

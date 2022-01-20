@@ -2,7 +2,9 @@
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item >
-        <shape android:shape="oval">
+        <ripple android:color="?attr/colorControlHighlight">
+        <item>
+            <shape android:shape="oval">
             <gradient
                 android:startColor="@color/primary_accented_color_start"
                 android:endColor="@color/primary_accented_color_end"
@@ -10,9 +12,19 @@
 
             <size android:height="@dimen/small_element_height_bigradius"
                 android:width="@dimen/small_element_height_bigradius"/>
+
+
         </shape>
+        </item>
+        </ripple>
     </item>
 
+<!--    <item>-->
+<!--        <ripple-->
+<!--            android:color="?attr/colorControlHighlight"-->
+<!---->
+<!--            />-->
+<!--    </item>-->
 
     <item android:drawable="@drawable/menu_vector"
         android:bottom="24dp"

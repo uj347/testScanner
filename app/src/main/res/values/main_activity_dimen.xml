@@ -10,4 +10,6 @@
     <dimen name="large_text_size">32sp</dimen>
     <dimen name="midle_text_size">17sp</dimen>
     <dimen name="usual_text_size">12sp</dimen>
+
+
 </resources>

@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.*
+import androidx.navigation.ActivityNavigatorExtras
+import androidx.navigation.fragment.FragmentNavigatorExtras
 
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -41,20 +44,16 @@ class RecyclerGridFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d(TAG, "onCreate!!!!")
+         Log.d(TAG, "onCreate!!!!")
         _binding = FragmentRecyclerGridBinding.inflate(inflater, container, false)
 
         binding.scanResultRecycler.apply {
             layoutManager = GridLayoutManager(requireContext(), 2)
-            adapter = AppsRecyclerAdapter { position, icon ->
-                findNavController()
-                    .navigate(
-                        RecyclerGridFragmentDirections.actionRecyclerGridFragmentToDetailsFragment(
-                            position
-                        )
-                    )
-            }.also { it.listenForAppInfo() }
+            adapter = AppsRecyclerAdapter ( onclickItemCallback = adapterCallback)
+                .also { it.listenForAppInfo()
+                }
         }
+
 
 
         return binding.root
@@ -64,6 +63,18 @@ class RecyclerGridFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
+
+
+    private val adapterCallback:(Int)->Unit ={position:Int ->
+
+              findNavController()
+                  .navigate(
+                      RecyclerGridFragmentDirections.actionRecyclerGridFragmentToDetailsFragment(
+                          position
+                      ))
+    }
+
+
 
 
     private fun AppsRecyclerAdapter.listenForAppInfo() {

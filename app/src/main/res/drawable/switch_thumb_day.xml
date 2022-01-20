@@ -2,6 +2,8 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item >
+    <ripple android:color="?attr/colorControlHighlight">
+    <item>
         <shape android:shape="oval">
             <gradient
                 android:startColor="@color/sun_moon_icon_start"
@@ -11,7 +13,15 @@
             <size android:height="@dimen/small_element_height_bigradius"
                 android:width="@dimen/small_element_height_bigradius"/>
 
+
         </shape>
+    </item>
+    </ripple>
+    </item>
+    <item>
+        <ripple
+            android:color="?attr/colorControlHighlight"
+              />
     </item>
 
     <item android:drawable="@drawable/sun"

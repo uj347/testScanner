@@ -4,8 +4,11 @@
     >
 
     <item>
-    <shape android:shape="oval">
 
+    <ripple android:color="?attr/colorControlHighlight">
+    <item>
+
+    <shape android:shape="oval">
                 <gradient
                     android:startColor="@color/sun_moon_icon_start"
                     android:endColor="@color/sun_moon_icon_end"
@@ -15,8 +18,10 @@
                     android:width="@dimen/small_element_height_bigradius"/>
 
             </shape>
-        </item>
+    </item>
+    </ripple>
 
+        </item>
 
         <item android:drawable="@drawable/moon"
             android:bottom="@dimen/thumb_picture_padding"

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.TestScanner"
     android:background="@drawable/mainscreen_background"
+    android:theme="@style/Theme.TestScanner"
     tools:context="testscanner.mainactivity.MainActivity">
 
 
@@ -30,14 +30,17 @@
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/customSwitch"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/small_element_height_bigradius"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:elevation="4dp"
         android:thumb="@drawable/switch_thumb"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guidline"
-        app:layout_constraintEnd_toStartOf="@id/center_guideline"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintEnd_toStartOf="@+id/menu_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.13"
         app:switchMinWidth="@dimen/switch_width"
         app:track="@drawable/switch_track" />
 
@@ -45,14 +48,16 @@
         android:id="@+id/menu_button"
         android:layout_width="@dimen/small_element_height_bigradius"
         android:layout_height="@dimen/small_element_height_bigradius"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/menu_button"
+        android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guidline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toEndOf="@id/center_guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
 
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/customSwitch"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.16000003"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -63,14 +68,11 @@
         app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/center_guideline"
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-
-
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
